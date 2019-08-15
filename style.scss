@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-/* 
+/*
   Color and size definitions
 */
 $accentColor: #018484;
@@ -91,118 +91,21 @@ $smallSpacing: 0.5em;
   grid-gap: $primarySpacing;
 }
 
-/*
-  Section styles
-*/
-// .twoColumnSection {
-//   display: grid;
-//   grid-template-columns: 1fr minmax(300px, 1fr);
-//   grid-template-areas: "left right";
-//   grid-gap: 1em;
-
-//   & > .leftColumn {
-//     grid-area: left;
-
-//     .outreachSection {
-//       display: grid;
-//       grid-auto-rows: min-content;
-//       grid-gap: 0.5em;
-  
-//       .outreachItem {
-//         display: grid;
-//         grid-template-columns: 180px 1fr;
-//         grid-template-areas: "title description";
-//         grid-gap: 1em;
-//       }
-//     }  
-//   }
-
-//   & > .rightColumn {
-//     display: grid;
-//     grid-area: right;
-//     grid-gap: 1em;
-
-//     .educationSection {
-//       display: grid;
-//       grid-auto-rows: min-content;
-//       grid-gap: 0.5em;
-  
-//       .educationItem {
-//         display: grid;
-//         grid-template-columns: 170px 1fr;
-//         grid-template-areas: "title description";
-//         grid-gap: 1em;
-//       }
-//     }
-
-//     .skillsSection {
-//       grid-auto-rows: min-content;
-//       display: grid;
-//       grid-gap: 0.5em;
-//     }
-//   }
-// }
-.twoColumnSection {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  & > .leftColumn {
-    flex-basis: 200px;
-    flex-grow: 9999;
-    margin: 0 1em 1em 0;
-
-    .outreachSection {
-      display: grid;
-      grid-auto-rows: min-content;
-      grid-gap: $smallSpacing;
-  
-      .outreachItem {
-        display: grid;
-        grid-template-columns: 180px 1fr;
-        grid-template-areas: "title description";
-        grid-gap: $primarySpacing;
-      }
-    }  
-  }
-
-  & > .rightColumn {
-    flex-basis:100px;
-    flex-grow:1;
-    min-width: 300px;
-
-    .educationSection {
-      display: grid;
-      grid-auto-rows: min-content;
-      grid-gap: $smallSpacing;
-      margin-bottom: $primarySpacing;
-  
-      .educationItem {
-        display: grid;
-        grid-template-columns: 170px 1fr;
-        grid-template-areas: "title description";
-        grid-gap: $primarySpacing;
-      }
-    }
-
-    .skillsSection {
-      grid-auto-rows: min-content;
-      display: grid;
-      grid-gap: $smallSpacing;
-    }
-  }
-}
-
-.experienceSection, .projectsSection {
+.experienceSection,
+.educationSection,
+.skillsSection,
+.projectsSection {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: $smallSpacing;
 }
 
-.experienceItem, .projectItem {
+.experienceItem,
+.educationItem,
+.projectItem {
   display: grid;
   grid-template-columns: minmax(auto, 135px) 1fr;
-  grid-template-areas: "title description";
+  grid-template-areas: 'title description';
   grid-gap: $primarySpacing;
 }
 
@@ -210,7 +113,10 @@ $smallSpacing: 0.5em;
   display: flex;
   flex-direction: column;
 
-  .companyName, .schoolName, .projectName, .outreachName {
+  .companyName,
+  .schoolName,
+  .projectName,
+  .outreachName {
     @extend %headerPrimary;
   }
 
@@ -232,7 +138,9 @@ $smallSpacing: 0.5em;
     list-style-type: square;
   }
 
-  .jobTitle, .degreeTitle, .outreachTitle {
+  .jobTitle,
+  .degreeTitle,
+  .outreachTitle {
     @extend %headerPrimary;
   }
 
@@ -240,7 +148,10 @@ $smallSpacing: 0.5em;
     margin-top: 10px;
   }
 
-  .jobDescription, .projectDescription, .degreeDescription, .outreachDescription  {
+  .jobDescription,
+  .projectDescription,
+  .degreeDescription,
+  .outreachDescription {
     @extend %bodyPrimary;
   }
 }
@@ -258,18 +169,11 @@ $smallSpacing: 0.5em;
     }
   }
 
-  .twoColumnSection {
-    grid-template-columns: 1fr minmax(auto, 350px);
-
-    .educationSection {
-      .educationItem {
-        grid-template-columns: minmax(auto, 180px) 1fr;
-      }
-    }
-  }
-
   .leftColumn {
-    .companyName, .schoolName, .projectName, .outreachName {
+    .companyName,
+    .schoolName,
+    .projectName,
+    .outreachName {
       font-size: 14px;
     }
 
@@ -279,11 +183,16 @@ $smallSpacing: 0.5em;
   }
 
   .rightColumn {
-    .jobTitle, .degreeTitle, .outreachTitle {
+    .jobTitle,
+    .degreeTitle,
+    .outreachTitle {
       font-size: 14px;
     }
 
-    .jobDescription, .projectDescription, .degreeDescription, .outreachDescription {
+    .jobDescription,
+    .projectDescription,
+    .degreeDescription,
+    .outreachDescription {
       font-size: 12px;
     }
   }
